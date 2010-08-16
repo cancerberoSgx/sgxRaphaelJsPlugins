@@ -1,0 +1,44 @@
+<html>
+<head>
+<script src="http://github.com/DmitryBaranovskiy/raphael/blob/master/raphael-min.js?raw=true"></script>
+<script src="matrixTransf.js"></script>
+<style type="text/css">
+#paper {
+	display: block;
+	width: 100%;
+	height: 700px;
+}
+</style>
+<body>
+
+<div id="paper"></div>
+<script>
+var imgUrl = "mate.jpg";
+var paper = Raphael("paper", 1320, 1200);
+var PI = 3.1416;
+
+paper.text(420,20, 
+	"In Uruguay, Argentina, Paraguay and Brazil there is\n "+
+	"a traditional hot infusion known as \"mate\" that has an effect similar \n"+
+	"to coffee...");
+
+paper.text(120,120, "normal picture: ");
+paper.image("mate.jpg", 300, 120, 90, 130);
+
+paper.text(120,270, "skew x - picture - .skewX(0.5) ");
+paper.image("mate.jpg", 300, 270, 90, 130).skewX(0.5);
+
+paper.text(120,420, "skew Y - picture  - .skewY(0.5)");
+paper.image("mate.jpg", 300, 420, 90, 130).skewY(0.5);
+
+paper.text(120,550, "reflected - .reflect(PI/2)");
+paper.image("mate.jpg", 300, 550, 90, 130).reflect(PI/2);
+
+paper.text(120,700, "rotated - .rotateOver(PI/5, 750, 350)");
+paper.image("mate.jpg", 300, 700, 90, 130).rotateOver(PI/5, 750, 350);
+
+paper.text(120,850, "skewXY - .matrix(1, 0.5, 0.8, 1)");
+paper.image("mate.jpg", 300, 850, 90, 130).matrix(1, 0.5, 0.8, 1);
+</script>
+</body>
+</html>
