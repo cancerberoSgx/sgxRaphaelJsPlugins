@@ -344,6 +344,10 @@
 })();
 /*
  *  'feMorphology' support  for raphael. Only available on svg
+ *  use shape1.morphology(morphname, operator, radius)
+ *  where operator cah be "erode" or "dilate" and radius an int. morphname is 
+ *  the name of your transformation and can be used later for unregistering the 
+ *  transf using shape1.morphologyClear(morphname).
  * @author: SebastiÃ¡n Gurin <sgurin @ montevideo  DOT com  DOT uy>
  */
 (function () {

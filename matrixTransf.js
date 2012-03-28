@@ -1,5 +1,6 @@
 /** 
- * Matrix transformation raphaeljs plugin. Support both svg and vml. Skewx, skewy, rotate, and reflect based operations also available will give you a glue on how to use the matrix() function. 
+ * Matrix transformation raphaeljs 1.x plugin. This is now obsolte in raphael2.0 because it support this directly using matrix() function. 
+Support both svg and vml. Skewx, skewy, rotate, and reflect based operations also available will give you a glue on how to use the matrix() function. 
  * Note that when used with other operations like 
  * 	aFigure.scale(...).rotate(...).matrix(...)
  * this plugin can have some unespected behaviour in IE. This is why thi s cannot be proposed as an integral part of raphaeljs library, yet.
